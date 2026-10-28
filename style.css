@@ -1098,3 +1098,11 @@ padding: 80px 8%;
   text-decoration: none;
   color: inherit;
 }
+/* TESTE TEMPORÁRIO — LETRAS DA INTRODUÇÃO */
+
+.rest-name span {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    animation: none !important;
+}
