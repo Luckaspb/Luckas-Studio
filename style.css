@@ -158,38 +158,37 @@ a {
 ======================================== */
 
 .intro-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: block;
+    width: 100%;
 
-  width: 100%;
+    text-align: center;
 
-  font-size: clamp(48px, 10vw, 140px);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -4px;
+    font-size: clamp(48px, 10vw, 140px);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -4px;
 
-  color: #ffffff;
+    color: #ffffff;
 
-  background: linear-gradient(
-    110deg,
-    #777777 0%,
-    #ffffff 30%,
-    #888888 42%,
-    #ffffff 50%,
-    #888888 58%,
-    #ffffff 70%,
-    #777777 100%
-  );
+    background: linear-gradient(
+        110deg,
+        #777777 0%,
+        #ffffff 30%,
+        #888888 42%,
+        #ffffff 50%,
+        #888888 58%,
+        #ffffff 70%,
+        #777777 100%
+    );
 
-  background-size: 300% 100%;
-  background-position: 100% 0;
+    background-size: 300% 100%;
+    background-position: 100% 0;
 
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-  animation: cinematicShine 1s ease-in-out 2.8s forwards;
+    animation: cinematicShine 1.2s ease-in-out 2s forwards;
 }
 
 @keyframes cinematicShine {
@@ -1097,9 +1096,4 @@ padding: 80px 8%;
 .project-card:hover {
   text-decoration: none;
   color: inherit;
-}
-/* TESTE 2 — ANIMAÇÃO DAS LETRAS */
-
-.rest-name span {
-    filter: none !important;
 }
