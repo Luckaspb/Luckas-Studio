@@ -1,318 +1,247 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Luckas — Web Design & Development. Desenvolvimento de sites modernos e personalizados para empresas."
-  >
+  <title>Luckas Studio | Desenvolvimento Web</title>
+  <meta name="description" content="Luckas Studio — desenvolvimento de sites modernos, responsivos e experiências digitais.">
 
-  <title>Luckas | Web Design & Development</title>
-
-  <!-- FONTE -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
-    rel="stylesheet"
-  >
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- ===================================
-       INTRO CINEMATOGRÁFICA — THE REVEAL
-  ==================================== -->
+  <!-- MENU -->
+  <header class="header">
+    <a href="#inicio" class="logo">LUCKAS<span>STUDIO.</span></a>
 
-  <div class="intro" id="intro">
+    <nav class="nav" id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-    <!-- LINHA DE LUZ -->
-    <div class="reveal-line" aria-hidden="true"></div>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-    <!-- CONTEÚDO DA INTRODUÇÃO -->
-    <div class="intro-content" id="intro-content">
+  <main>
 
-      <h1 class="intro-title">LUCKAS</h1>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
 
-      <p class="intro-subtitle">
-        WEB DESIGN & DEVELOPMENT
-      </p>
+      <div class="hero-label">
+        HTML / CSS / JAVASCRIPT
+      </div>
 
-    </div>
+      <div class="hero-stage">
+        <h1 class="hero-name hero-name-left">LUCKAS</h1>
+
+        <img
+          class="hero-statue"
+          src="hero-3d.png"
+          alt="Escultura clássica futurista com iluminação laranja"
+        >
+
+        <div class="hero-name hero-name-right">STUDIO</div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-description">
+          <span class="eyebrow">PORTFÓLIO / 2026</span>
+          <p>Desenvolvimento web, design e experiências digitais com propósito.</p>
+        </div>
+
+        <a class="hero-button" href="#projetos">
+          Explorar projetos
+        </a>
+      </div>
+
+    </section>
+
+    
+<section class="projects section" id="projetos">
+
+  <div class="section-heading">
+    <span class="eyebrow">01 / PORTFÓLIO</span>
+    <h2>Projetos em <span>destaque.</span></h2>
+    <p>Explore algumas das experiências digitais desenvolvidas pelo Luckas Studio.</p>
+  </div>
+
+  <div class="portfolio-explorer">
+
+    <!-- Pasta interativa -->
+    <button class="portfolio-folder" type="button"
+      aria-expanded="false"
+      aria-controls="portfolio-files">
+
+      <span class="folder-tab"></span>
+
+      <span class="folder-content">
+        <span class="folder-label">LUCKAS STUDIO / 2026</span>
+        <span class="folder-title">EXPLORE<br>MEUS PROJETOS.</span>
+        <span class="folder-hint">CLIQUE PARA EXPLORAR </span>
+      </span>
+
+    </button>
+
+    
+<div class="portfolio-files" id="portfolio-files" hidden>
+
+  <!-- 01 - LUME -->
+  <a class="portfolio-file"
+     href="https://lynx-theta-two.vercel.app/"
+     target="_blank"
+     rel="noopener noreferrer">
+    <span class="file-number">01</span>
+    <span class="file-info">
+      <strong>LUME</strong>
+      <small>Restaurante & Bistrô</small>
+    </span>
+    <span class="file-arrow">↗</span>
+  </a>
+
+  <!-- 02 - ÁUREA -->
+  <div class="portfolio-file">
+    <span class="file-number">02</span>
+    <span class="file-info">
+      <strong>ÁUREA</strong>
+      <small>Website imobiliário</small>
+    </span>
+    <span class="file-arrow">↗</span>
+  </div>
+
+  <!-- 03 - DRIP -->
+  <div class="portfolio-file">
+    <span class="file-number">03</span>
+    <span class="file-info">
+      <strong>DRIP</strong>
+      <small>E-commerce de moda</small>
+    </span>
+    <span class="file-arrow">↗</span>
+  </div>
+
+  <!-- 04 - STACK BURGER -->
+  <div class="portfolio-file">
+    <span class="file-number">04</span>
+    <span class="file-info">
+      <strong>STACK BURGER</strong>
+      <small>Website de hamburgueria</small>
+    </span>
+    <span class="file-arrow">↗</span>
+  </div>
+
+  <!-- 05 - GRANA TEEN -->
+  <a class="portfolio-file"
+     href="https://granateen-vp2m.vercel.app/"
+     target="_blank"
+     rel="noopener noreferrer">
+    <span class="file-number">05</span>
+    <span class="file-info">
+      <strong>Grana Teen</strong>
+      <small>Plataforma de educação financeira</small>
+    </span>
+    <span class="file-arrow">↗</span>
+  </a>
+
+</div>
+
 
   </div>
 
+</section>
 
-  <!-- ===================================
-       SITE PRINCIPAL
-  ==================================== -->
+<section class="simulator section" id="simulador">
 
-  <main class="site" id="site">
+  <div class="simulator-header">
+    <span class="eyebrow">03 / LABORATÓRIO CRIATIVO</span>
 
-    <!-- CABEÇALHO -->
-    <header class="site-header">
+    <h2>
+      SUA IDEIA.<br>
+      <span>NOSSA CRIAÇÃO.</span>
+    </h2>
 
-      <a href="#inicio" class="header-logo">
-        LUCKAS<span>.</span>
-      </a>
+    <p>
+      Descreva o site que você imagina e descubra
+      como sua ideia pode ganhar vida.
+    </p>
+  </div>
 
-      <nav class="header-nav" aria-label="Navegação principal">
-        <a href="#inicio">HOME</a>
-        <a href="#projetos">PROJECTS</a>
-        <a href="#contato">CONTATO</a>
-      </nav>
+  <div class="simulator-form">
 
-    </header>
+    <label for="project-idea">
+      CONTE SUA IDEIA
+    </label>
 
+    <textarea
+      id="project-idea"
+      placeholder="Ex: Quero um site moderno para minha cafeteria, com cardápio, fotos e botão de WhatsApp..."
+      rows="5"
+      maxlength="1000"
+    ></textarea>
 
-    <!-- ===================================
-         HERO
-    ==================================== -->
+    <button type="button" id="generate-project">
+      SIMULAR MEU PROJETO
+    </button>
 
-    <section class="hero" id="inicio">
+  </div>
 
-      <span class="hero-tag">
-        DESENVOLVIMENTO WEB & DESIGN
-      </span>
-      <span class="hero-role">FRONT-END</span>
+<!-- RESULTADO DA SIMULAÇÃO -->
+<div class="simulator-result" id="simulator-result" hidden>
 
-      <h2>
-        TRANSFORMANDO IDEIAS<br>
-        EM <span>EXPERIÊNCIAS DIGITAIS.</span>
-      </h2>
+  <span class="eyebrow">SEU PROJETO GANHANDO VIDA</span>
 
-      <p>
-        Sites modernos, personalizados e desenvolvidos
-        para destacar a identidade do seu negócio.
-      </p>
-      <div class="hero-skills">
-    <span>HTML5</span>
-    <span>CSS3</span>
-    <span>JavaScript</span>
+  <div class="result-image">
+    <img
+      id="generated-image"
+      alt="Prévia visual do projeto gerado por inteligência artificial"
+    >
+  </div>
+
+  <div class="result-details">
+    <div>
+      <span class="result-label">TIPO DE PROJETO</span>
+      <h3 id="project-type">Landing Page</h3>
+    </div>
+
+    <div>
+      <span class="result-label">INVESTIMENTO ESTIMADO</span>
+      <p id="project-price">A calcular</p>
+    </div>
+  </div>
+
+  <p class="result-disclaimer">
+    Esta é uma simulação visual. O orçamento definitivo
+    depende das funcionalidades e necessidades do projeto.
+  </p>
+
 </div>
 
-      <a href="#projetos" class="hero-button">
-        EXPLORAR PROJETOS 
+</section>
+
+    <!-- CONTATO -->
+    <section class="contact section" id="contato">
+      <span class="eyebrow">03 / CONTATO</span>
+      <h2>Seu próximo projeto<br>começa <span>aqui.</span></h2>
+      <p>Tem uma ideia? Vamos conversar sobre como transformá-la em realidade.</p>
+      <a href="mailto:SEUEMAIL@EXEMPLO.COM" class="contact-button">
+        Entrar em contato
       </a>
-
-    </section>
-
-
-    <!-- ===================================
-         PROJETOS
-    ==================================== -->
-
-    <section class="projects" id="projetos">
-
-      <div class="projects-container">
-
-        <!-- CABEÇALHO DOS PROJETOS -->
-        <div class="projects-header">
-
-          <div class="projects-topbar">
-
-            <span class="projects-label">
-              PORTFÓLIO / 2026
-            </span>
-
-            <span class="projects-count">
-              PROJETOS <span>04</span>
-            </span>
-
-          </div>
-
-        </div>
-
-
-        <!-- GRADE DE PROJETOS -->
-        <div class="projects-grid">
-
-          <!-- PROJETO 01 — AUREA -->
-          <a
-  href="https://imob-iliaria.vercel.app/"
-  class="project-card"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Visitar projeto AUREA"
->
-
-            <div class="project-image">
-              <img
-                src="assets/projects/aurea-hero.png"
-                alt="Projeto Aurea Imobiliária"
-              >
-            </div>
-
-            <div class="project-info">
-
-              <div>
-                <span class="project-category">
-                  01 / IMOBILIÁRIA
-                </span>
-
-                <h3>AUREA</h3>
-              </div>
-
-              <span class="project-arrow">↗</span>
-
-            </div>
-
-          </a>
-
-
-          <!-- PROJETO 02 — LUME -->
-          <a href="https://lume-restaurante-dun.vercel.app/"
-   class="project-card"
-   target="_blank"
-   rel="noopener noreferrer">
-
-            <div class="project-image">
-              <img
-                src="assets/projects/lume-hero.png"
-                alt="Projeto Lume Restaurante"
-              >
-            </div>
-
-            <div class="project-info">
-
-              <div>
-                <span class="project-category">
-                  02 / RESTAURANTE
-                </span>
-
-                <h3>LUME</h3>
-              </div>
-
-              <span class="project-arrow">↗</span>
-
-            </div>
-
-          </a>
-
-
-          <!-- PROJETO 03 — DRIP -->
-          <a href="https://drip-liard.vercel.app/"
-   class="project-card"
-   target="_blank"
-   rel="noopener noreferrer">
-
-            <div class="project-image">
-              <img
-                src="assets/projects/drip-hero.png"
-                alt="Projeto Drip Streetwear"
-              >
-            </div>
-
-            <div class="project-info">
-
-              <div>
-                <span class="project-category">
-                  03 / MODA & STREETWEAR
-                </span>
-
-                <h3>DRIP</h3>
-              </div>
-
-              <span class="project-arrow">↗</span>
-
-            </div>
-
-          </a>
-
-
-          <!-- PROJETO 04 — STACK BURGER -->
-          <a href="https://stack-burguer-rouge.vercel.app/"
-   class="project-card"
-   target="_blank"
-   rel="noopener noreferrer">
-
-            <div class="project-image">
-              <img
-                src="assets/projects/stack-burger-hero.png"
-                alt="Projeto Stack Burger"
-              >
-            </div>
-
-            <div class="project-info">
-
-              <div>
-                <span class="project-category">
-                  04 / HAMBURGUERIA
-                </span>
-
-                <h3>STACK BURGER</h3>
-              </div>
-
-              <span class="project-arrow">↗</span>
-
-            </div>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ===================================
-         CONTATO
-    ==================================== -->
-
-    <section class="contact" id="contato">
-
-      <div class="contact-container">
-
-        <span class="contact-tag">
-          TEM UM PROJETO EM MENTE?
-        </span>
-
-        <h2>
-          VAMOS CRIAR<br>
-          <span>ALGO INCRÍVEL.</span>
-        </h2>
-
-        <p>
-  Seu próximo projeto começa com uma conversa.
-  Vamos transformar sua ideia em uma experiência digital.
-</p>
-
-<a
-  href="https://wa.me/5511970926442"
-  class="contact-button"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  INICIAR UM PROJETO 
-</a>
-
-        <div class="contact-footer">
-
-          <span>LUCKAS © 2026</span>
-
-          <span>
-            WEB DESIGN & DEVELOPMENT
-          </span>
-
-        </div>
-
-      </div>
-
     </section>
 
   </main>
 
-
-  <!-- JAVASCRIPT -->
-  <script src="script.js"></script>
+  <footer class="footer">
+    <span>LUCKAS STUDIO.</span>
+    <p>© 2026 — Desenvolvimento com propósito.</p>
+  </footer>
 
 </body>
 </html>

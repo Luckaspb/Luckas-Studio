@@ -1,47 +1,85 @@
-/* ========================================
-   LUCKAS — WEB DESIGN & DEVELOPMENT
-   INTRO CINEMATOGRÁFICA — THE REVEAL
-======================================== */
 
-// Elementos principais
-const intro = document.querySelector("#intro");
-const site = document.querySelector("#site");
+const menuButton = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
 
-// Impede o navegador de restaurar a posição anterior
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
+menuButton.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("active");
+
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute(
+    "aria-label",
+    isOpen ? "Fechar menu" : "Abrir menu"
+  );
+});
+
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir menu");
+  });
+});
+
+/* PASTA INTERATIVA */
+
+const portfolioFolder = document.querySelector(".portfolio-folder");
+const portfolioExplorer = document.querySelector(".portfolio-explorer");
+const portfolioFiles = document.querySelector(".portfolio-files");
+
+if (portfolioFolder && portfolioExplorer && portfolioFiles) {
+  portfolioFolder.addEventListener("click", () => {
+    const isOpen = portfolioExplorer.classList.toggle("is-open");
+
+    portfolioFolder.setAttribute("aria-expanded", String(isOpen));
+
+    if (isOpen) {
+      portfolioFiles.hidden = false;
+    } else {
+      portfolioFiles.hidden = true;
+    }
+  });
 }
 
-// Inicia a página no topo
-window.scrollTo(0, 0);
 
-// Bloqueia a rolagem durante a introdução
-document.body.style.overflow = "hidden";
+/* ===== SIMULADOR DE PROJETOS ===== */
 
-// Tempo total da introdução
-const introDuration = 4500;
+const generateButton = document.querySelector("#generate-project");
+const projectIdea = document.querySelector("#project-idea");
 
-// Tempo da transição de saída
-const exitDuration = 700;
+generateButton.addEventListener("click", () => {
+  const idea = projectIdea.value.trim();
 
-// Aguarda a animação cinematográfica terminar
-setTimeout(() => {
+  if (idea === "") {
+    alert("Descreva sua ideia antes de continuar!");
+    return;
+  }
 
-  // Revela o portfólio
-  site.classList.add("site-visible");
+  fetch("/api/simular", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ ideia: idea })
+  })
+    .then(resposta => resposta.json())
+    
+.then(dados => {
+  if (!dados.sucesso) {
+    alert(dados.mensagem);
+    return;
+  }
 
-  // Inicia o desaparecimento da introdução
-  intro.classList.add("intro-exit");
+  const result = document.querySelector("#simulator-result");
+  const image = document.querySelector("#generated-image");
 
-  // Libera a rolagem
-  document.body.style.overflow = "";
+  image.src = dados.imagem;
+  result.hidden = false;
 
-  // Garante que o site comece no topo
-  window.scrollTo(0, 0);
+  console.log("Imagem gerada com sucesso!");
+})
 
-  // Remove a introdução depois da transição
-  setTimeout(() => {
-    intro.remove();
-  }, exitDuration);
+    .catch(erro => {
+      console.error("Erro ao conectar com a API:", erro);
+    });
+});
 
-}, introDuration);
