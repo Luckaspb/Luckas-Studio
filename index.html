@@ -9,19 +9,35 @@
   <meta name="description" content="Luckas Studio — desenvolvimento de sites modernos, responsivos e experiências digitais.">
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  
+<script src="templates.js" defer></script>
+<script src="script.js" defer></script>
+
 </head>
 
 <body>
 
-  <!-- MENU -->
-  <header class="header">
-    <a href="#inicio" class="logo">LUCKAS<span>STUDIO.</span></a>
+  
+<!-- MENU -->
+<header class="header">
+  
+
+<a href="#inicio" class="logo">
+  <span class="logo-name">
+    <span class="logo-luckas">LUCKAS</span>
+    <span class="logo-studio">STUDIO.</span>
+  </span>
+  <small class="logo-subtitle">
+    FULL STACK DEVELOPMENT | FRONT-END & BACK-END
+  </small>
+</a>
+
+
+
 
     <nav class="nav" id="nav">
       <a href="#inicio">Início</a>
       <a href="#projetos">Projetos</a>
-      <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -38,7 +54,7 @@
     <section class="hero" id="inicio">
 
       <div class="hero-label">
-        HTML / CSS / JAVASCRIPT
+    
       </div>
 
       <div class="hero-stage">
@@ -56,7 +72,7 @@
       <div class="hero-bottom">
         <div class="hero-description">
           <span class="eyebrow">PORTFÓLIO / 2026</span>
-          <p>Desenvolvimento web, design e experiências digitais com propósito.</p>
+          <p>Desenvolvimento web HTML / CSS / JAVASCRIPT & APIs</p>
         </div>
 
         <a class="hero-button" href="#projetos">
@@ -97,7 +113,7 @@
 
   <!-- 01 - LUME -->
   <a class="portfolio-file"
-     href="https://lynx-theta-two.vercel.app/"
+     href="https://lume-restaurante-dun.vercel.app/"
      target="_blank"
      rel="noopener noreferrer">
     <span class="file-number">01</span>
@@ -105,38 +121,45 @@
       <strong>LUME</strong>
       <small>Restaurante & Bistrô</small>
     </span>
-    <span class="file-arrow">↗</span>
-  </a>
+    </a>
 
-  <!-- 02 - ÁUREA -->
-  <div class="portfolio-file">
-    <span class="file-number">02</span>
-    <span class="file-info">
-      <strong>ÁUREA</strong>
-      <small>Website imobiliário</small>
-    </span>
-    <span class="file-arrow">↗</span>
-  </div>
+  
+<!-- 02 - ÁUREA -->
+<a class="portfolio-file"
+   href="https://imob-iliaria.vercel.app/"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="file-number">02</span>
+  <span class="file-info">
+    <strong>ÁUREA</strong>
+    <small>Website imobiliário</small>
+  </span>
+</a>
 
-  <!-- 03 - DRIP -->
-  <div class="portfolio-file">
-    <span class="file-number">03</span>
-    <span class="file-info">
-      <strong>DRIP</strong>
-      <small>E-commerce de moda</small>
-    </span>
-    <span class="file-arrow">↗</span>
-  </div>
+<!-- 03 - DRIP -->
+<a class="portfolio-file"
+   href="https://drip-liard.vercel.app/"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="file-number">03</span>
+  <span class="file-info">
+    <strong>DRIP</strong>
+    <small>E-commerce de moda</small>
+  </span>
+</a>
 
-  <!-- 04 - STACK BURGER -->
-  <div class="portfolio-file">
-    <span class="file-number">04</span>
-    <span class="file-info">
-      <strong>STACK BURGER</strong>
-      <small>Website de hamburgueria</small>
-    </span>
-    <span class="file-arrow">↗</span>
-  </div>
+<!-- 04 - STACK BURGER -->
+<a class="portfolio-file"
+   href="https://stack-burguer-rouge.vercel.app/"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="file-number">04</span>
+  <span class="file-info">
+    <strong>STACK BURGER</strong>
+    <small>Website de hamburgueria</small>
+  </span>
+</a>
+
 
   <!-- 05 - GRANA TEEN -->
   <a class="portfolio-file"
@@ -148,7 +171,7 @@
       <strong>Grana Teen</strong>
       <small>Plataforma de educação financeira</small>
     </span>
-    <span class="file-arrow">↗</span>
+
   </a>
 
 </div>
@@ -198,12 +221,17 @@
 
   <span class="eyebrow">SEU PROJETO GANHANDO VIDA</span>
 
-  <div class="result-image">
-    <img
-      id="generated-image"
-      alt="Prévia visual do projeto gerado por inteligência artificial"
-    >
-  </div>
+  
+<div class="result-image">
+  <iframe
+    id="generated-site"
+    title="Prévia do site gerado por inteligência artificial"
+    sandbox=""
+    referrerpolicy="no-referrer"
+    loading="lazy">
+  </iframe>
+</div>
+
 
   <div class="result-details">
     <div>
@@ -231,9 +259,16 @@
       <span class="eyebrow">03 / CONTATO</span>
       <h2>Seu próximo projeto<br>começa <span>aqui.</span></h2>
       <p>Tem uma ideia? Vamos conversar sobre como transformá-la em realidade.</p>
-      <a href="mailto:SEUEMAIL@EXEMPLO.COM" class="contact-button">
-        Entrar em contato
-      </a>
+      
+<a
+  class="contact-button"
+  href="https://wa.me/5511970926442?text=Ol%C3%A1%21%20Conheci%20o%20Luckas%20Studio%20pelo%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  ENTRE EM CONTATO
+</a>
+
     </section>
 
   </main>
